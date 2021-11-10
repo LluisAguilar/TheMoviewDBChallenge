@@ -5,4 +5,8 @@
     <string name="movies">Movies</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="could_not_find_file" >No file found</string>
+    <string name="image_uploading">Uploading Image</string>
+    <string name="image_upload_success">Image upload successfully</string>
+    <string name="image_upload_error">Upload Error</string>>
 </resources>

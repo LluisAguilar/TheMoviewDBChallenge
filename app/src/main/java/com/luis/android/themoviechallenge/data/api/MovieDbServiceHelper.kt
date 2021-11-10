@@ -4,6 +4,6 @@ import com.luis.android.themoviechallenge.data.model.MovieResult
 
 interface MovieDbServiceHelper {
 
-    suspend fun getPopularMovies(params : Map<String, String>): MovieResult
+    suspend fun getPopularMovies(pageNum:String): MovieResult
 
 }

@@ -10,7 +10,7 @@ class AuthInterceptor : Interceptor{
 
         val requestBuilder = request.newBuilder()
 
-        requestBuilder.addHeader("Authorization", "Bearer +$AUTHORIZATION_API_TOKEN")
+        requestBuilder.addHeader("Authorization", AUTHORIZATION_API_TOKEN)
         requestBuilder.addHeader("Content-Type", "application/json;charset=utf-8'")
 
         request = requestBuilder.build()

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "638107166181",
+    "project_id": "movieschallenge-a82f1",
+    "storage_bucket": "movieschallenge-a82f1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:638107166181:android:2b71ad665d59875a3b3b0c",
+        "android_client_info": {
+          "package_name": "com.luis.android.themoviechallenge"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "638107166181-tu74dbpa1hkls14gndv1e4if7st9t5hh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDTc9sHfb-aG3HrHrKsGZG1dtmkllcNQU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "638107166181-tu74dbpa1hkls14gndv1e4if7st9t5hh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

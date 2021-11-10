@@ -1,28 +1,29 @@
 package com.lyft.android.themoviedbtest.view.adapter
 
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentPagerAdapter
+import androidx.fragment.app.FragmentActivity
+import androidx.viewpager2.adapter.FragmentStateAdapter
 
-class ViewPagerAdapter (manager: FragmentManager) : FragmentPagerAdapter(manager, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
+class ViewPagerAdapter (val fragmentList:List<Fragment>, fragmentActivity: FragmentActivity) : FragmentStateAdapter(fragmentActivity) {
 
-    private val fragmentList : MutableList<Fragment> = arrayListOf()
-    private val titleList : MutableList<String> = arrayListOf()
+    override fun getItemCount(): Int = fragmentList.size
 
-    override fun getItem(position: Int): Fragment {
-        return fragmentList[position]
+    override fun createFragment(position: Int): Fragment {
+        var fragment = Fragment()
+
+        when(position){
+            0-> {
+                fragment =  fragmentList.get(0)
+            }
+
+            1-> {
+                fragment =  fragmentList.get(1)
+            }
+        }
+
+        return fragment
     }
 
-    override fun getCount(): Int {
-        return fragmentList.size
-    }
 
-    override fun getPageTitle(position: Int): CharSequence {
-        return titleList[position]
-    }
 
-    fun addFragment(fragment : Fragment, title : String){
-        fragmentList.add(fragment)
-        titleList.add(title)
-    }
 }

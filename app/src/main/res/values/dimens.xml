@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="main_margin_top">20dp</dimen>
+    <dimen name="main_text_title_start_margin">20dp</dimen>
+    <dimen name="top_margin_movies_separation">10dp</dimen>
+    <dimen name="movie_text_title_margin">5dp</dimen>
+    <dimen name="main_movie_text_title_size">14sp</dimen>
+    <dimen name="item_movie_cardview_width">120dp</dimen>
+    <dimen name="item_movie_cardview_height">160dp</dimen>
+    <dimen name="movies_title_menu_text_size">20sp</dimen>
+    <dimen name="item_categories_cardview_height">100dp</dimen>
+    <dimen name="item_categories_cardview_width">180dp</dimen>
+    <dimen name="main_category_text_size">25sp</dimen>
+    <dimen name="searchview_height">50dp</dimen>
+    <dimen name="arrow_back_width">30dp</dimen>
+    <dimen name="arrow_back_height">30dp</dimen>
+    <dimen name="image_detail_movie_margin">10dp</dimen>
+    <dimen name="detail_movie_title_text_size">18sp</dimen>
+    <dimen name="detail_movie_text_size">18sp</dimen>
+    <dimen name="detail_movie_subtitle_text_size">14sp</dimen>
+    <dimen name="detail_movie_top_margin">10dp</dimen>
+    <dimen name="detail_movie_margin">10dp</dimen>
+    <dimen name="detail_movie_synopsis_size">13sp</dimen>
+    <dimen name="alert_loader_height">75dp</dimen>
+    <dimen name="arrow_down_width">25dp</dimen>
+    <dimen name="arrow_down_height">25dp</dimen>
+    <dimen name="botton_layout_padding">20dp</dimen>
+    <dimen name="bottom_video_margin">20dp</dimen>
+    <dimen name="bottom_fragment_margin_item_top">5dp</dimen>
+    <dimen name="bottom_bar_height">60dp</dimen>
+    <dimen name="bottom_fragment_elevation">40dp</dimen>
+</resources>

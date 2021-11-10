@@ -7,6 +7,6 @@ import javax.inject.Inject
 class MovieDbServiceImpl @Inject constructor(
     private val movieDbService: MovieDbService
 ): MovieDbServiceHelper {
-    override suspend fun getPopularMovies(params: Map<String, String>): MovieResult = movieDbService.getPopularMovies(params)
+    override suspend fun getPopularMovies(pageNum: String): MovieResult = movieDbService.getPopularMovies(pageNum)
 
 }
