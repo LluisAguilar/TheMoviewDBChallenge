@@ -1,6 +1,7 @@
 package com.luis.android.themoviechallenge.view.activity
 
 import android.Manifest
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -55,32 +56,31 @@ class MainActivity : AppCompatActivity() {
 
         initViewPagerView()
         initBottomAppBar()
-        getPopularMoviesResponse()
         getPopularMoviesError()
 
     }
 
     private fun getPopularMoviesResponse() {
-        mMoviesViesModel.popularMoviesResult.observe(this, {
+        mMoviesViesModel.popularMoviesResult.observe(this) {
             it.map {
                 mMoviesFragment.setMoviesView(toPopularMoviesData(it.popularMovies))
             }
-        })
+        }
 
-        mMoviesViesModel.getLocalPopularMovie().observe(this, {
+        mMoviesViesModel.getLocalPopularMovie().observe(this) {
             if (it.isNotEmpty()) {
                 mMoviesFragment.setMoviesView(toPopularMoviesData(it))
             } else {
                 getPopularMoviesRequest()
             }
-        })
+        }
 
     }
 
     private fun getPopularMoviesError() {
-        mMoviesViesModel.popularMoviesError.observe(this, {
+        mMoviesViesModel.popularMoviesError.observe(this) {
             Log.e(mTag, it)
-        })
+        }
     }
 
     private fun getPopularMoviesRequest(pageNumber:String = "1") {
@@ -173,6 +173,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    @SuppressLint("SuspiciousIndentation")
     private fun loadImageToServer(uri: Uri) {
         Log.i("ImagePathh", "Uri image: $uri")
 

@@ -1,6 +1,5 @@
 package com.luis.android.themoviechallenge.view.viewmodel
 
-import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -13,12 +12,16 @@ import com.luis.android.themoviechallenge.domain.model.PopularMovies
 import com.luis.android.themoviechallenge.domain.usecase.GetLocalPopularMoviesUseCase
 import com.luis.android.themoviechallenge.domain.usecase.GetPopularMoviesUseCase
 import com.luis.android.themoviechallenge.domain.usecase.InsertPopularMoviesUseCase
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class MoviesViewModel @ViewModelInject constructor(private val getPopularMoviesUseCase: GetPopularMoviesUseCase,
-                                                   private val insertPopularMoviesUseCase: InsertPopularMoviesUseCase,
-                                                   private val getLocalPopularMoviesUseCase: GetLocalPopularMoviesUseCase
-                                                   ) : ViewModel() {
+@HiltViewModel
+class MoviesViewModel @Inject constructor(
+    private val getPopularMoviesUseCase: GetPopularMoviesUseCase,
+    private val insertPopularMoviesUseCase: InsertPopularMoviesUseCase,
+    private val getLocalPopularMoviesUseCase: GetLocalPopularMoviesUseCase
+    ) : ViewModel() {
 
     val popularMoviesResult = MutableLiveData<List<DomainMovieResult>>()
     val popularMoviesError = MutableLiveData<String>()
